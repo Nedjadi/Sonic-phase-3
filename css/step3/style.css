@@ -1,0 +1,108 @@
+
+@keyframes play-x {
+  0%{background-position:0 0 ;}
+  100%{background-position:-585px 0 ;}
+}
+
+@keyframes play-y {
+  0%{background-position-y:-70px;}
+  100%{background-position-y:-350px;}
+}
+
+@keyframes moves{
+  0%{background-position-x: 0;}
+  100%{background-position-x: -585px;}
+}
+
+@keyframes saut {
+  0%{bottom:26%;}
+  60%{left:45%}
+  70%{left:50%}
+  75%{bottom:26%}
+  82%{bottom:65%}
+  93%{bottom:26%}
+  100%{bottom:26%;}
+}
+
+.bg-cont {
+  position: relative;
+  height: 310px;
+}
+
+.sonic,.fond,.sol,.ciel,.mer{
+    background-image: url("../../img/step3/spriteSonicfullf.png");
+}
+
+.sonic {
+  z-index: 1000;
+  height: 70px;
+  width: 65px;
+  position: absolute;
+  bottom: 30%;
+  left:50% ;
+  animation: play-x 0.75s steps(9) infinite, play-y 3s steps(4) infinite;
+}
+
+.fond{
+  z-index: 900;
+  height: 110px;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left:0%;
+  background-position: 0 278px;
+  animation: moves infinite linear 2s;
+}
+
+.sol{
+  z-index: 850;
+  height: 160px;
+  width: 100%;
+  position: absolute;
+  bottom: 30%;
+  left:0%;
+  background-position: 0 163px;
+  animation: moves infinite linear 2.2s;
+}
+
+.mer{
+  z-index: 800;
+  height: 110px;
+  width: 100%;
+  position: absolute;
+  bottom:11%;
+  left:0%;
+  background-position: 0 395px;
+  animation: moves infinite linear 10s;
+}
+
+.ciel{
+  z-index: 820;
+  height: 185px;
+  width: 100%;
+  position: absolute;
+  top:0%;
+  left:0%;
+  background-position: 0 571px;
+  animation: moves infinite linear 15s
+}
+
+.saut{
+  height: 70px;
+  width: 65px;
+  bottom: 26%;
+  left:45%;
+  bottom:25%;
+  animation: saut 3s linear infinite ;
+  position: absolute;
+}
+
+.cocotier{
+  z-index: 700;
+  height: 140px;
+  animation: moves 0.9s steps(1)infinite;
+}
+.terre{
+  z-index: 800;
+  height:220px;
+}
